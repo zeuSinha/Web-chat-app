@@ -8,7 +8,7 @@
         <nav class="navbar navbar-expand-md navbar-fixed navbar-dark bg-dark">
 
           <a class="navbar-brand text-white">
-            <!-- {{userInfo.firstName}} {{userInfo.lastName}} -->
+            {{userInfo.firstName}} {{userInfo.lastName}}
             <i class="fa fa-circle online" *ngIf="disconnectedSocket == false"></i>
             <i class="fa fa-circle offline" *ngIf="disconnectedSocket == true"></i>
           </a>
@@ -24,12 +24,12 @@
 
             <ul class="list">
               <li class="p-2 typeOfChats">
-                <!-- Online Users: -->
+                Online Users:
               </li>
               <li class="clearfix cursorPointer" [ngClass]="{'activeChat': user.chatting == true}" (click)="userSelectedToChat(user.userId, user.name)"
                 *ngFor="let user of userList">
                 <div class="userPresence" *ngIf="user.userId != userInfo.userId">
-                  <!-- <user-details [userFirstName]="user.name" [userLastName]="''" [userStatus]="'online'" [messageRead]="user.unread"></user-details> -->
+                  <user-details [userFirstName]="user.name" [userLastName]="''" [userStatus]="'online'" [messageRead]="user.unread"></user-details>
                 </div>
               </li>
               

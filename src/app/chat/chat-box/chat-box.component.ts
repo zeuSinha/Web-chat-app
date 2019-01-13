@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatBoxComponent implements OnInit {
 
+  disconnectedSocket: Boolean;
+  userInfo: any;
+
   constructor() { }
 
   ngOnInit() {
