@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+
+    </div>
+    
+    <div class="col-md-6">
+      <form >
+        <div class="form-group">
+          <label for="first">First name</label>
+          <input type="text" class="form-control" name="first" [(ngModel)]="firstName" #first="ngModel" required autofocus>
+        </div>
+
+        <div class="form-group">
+          <label for="last">Last name</label>
+          <input type="text" class="form-control" name="last" [(ngModel)]="lastName" #last="ngModel" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" name="email" [(ngModel)]="emailId" #email="ngModel" required>
+        </div>
+
+        <div class="form-group">
+          <label for="mobil">Mobile number</label>
+          <input type="number" class="form-control" name="mobile" [(ngModel)]="mobileNumber" #mobile="ngModel" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="text" class="form-control" name="pass" [(ngModel)]="password" #pass="ngModel" required>
+        </div>
+
+        <div class="form-group">
+          <label for="api">Api key</label>
+          <textarea type="text" class="form-control" name="api" [(ngModel)]="apiKey" #api="ngModel" required rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-primary btn-block" (click)="signup()" >Sign up</button>
+        </div>
+      </form>
+    </div>
+  
+    <div class="col-md-3">
+      <h2>Already have account</h2>
+      <button class="btn btn-success" [routerLink]="['/login']" >LogIn</button>
+    </div>
+  </div>
+</div>
